@@ -10,7 +10,9 @@ require_once("config.php");
 
 //========CARREGA LISTA DE USUARIOS==========
 
-$lista = Usuario::getList()/
+$lista = Usuario::getList();
+
+echo json_encode($lista);
 
 
 ?>

@@ -71,7 +71,7 @@ class Usuario{
 
         $sql = new Sql();
 
-        return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin;")
+        return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin;");
 
     }
 //=========CONVERTER PARA STRING===========
