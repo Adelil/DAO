@@ -67,7 +67,7 @@ class Usuario{
         
     }
 //=========GET LISTA=======================
-    public function getList(){
+    public static function getList(){
 
         $sql = new Sql();
 

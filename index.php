@@ -1,17 +1,16 @@
 <?php
 
 require_once("config.php");
+//====CAMPO ABAIXO CARREGA 1 USUARIO==========
+//$root = new Usuario();
+//$root->loadById(6);
+//echo $root
+//============================================
 
-$root = new Usuario();
 
-$root->loadById(6);
+//========CARREGA LISTA DE USUARIOS==========
 
-echo $root;
+$lista = Usuario::getList()/
 
-//$sql = new Sql();
-
-//$usuarios = $sql->select("SELECT * FROM tb_usuarios");
-
-//echo json_encode($usuarios);
 
 ?>
