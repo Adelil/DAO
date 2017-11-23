@@ -66,6 +66,14 @@ class Usuario{
         }
         
     }
+//=========GET LISTA=======================
+    public function getList(){
+
+        $sql = new Sql();
+
+        return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin;")
+
+    }
 //=========CONVERTER PARA STRING===========
     public function __toString(){
         
