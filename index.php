@@ -7,12 +7,18 @@ require_once("config.php");
 //echo $root
 //============================================
 
-
 //========CARREGA LISTA DE USUARIOS==========
+//$lista = Usuario::getList();
+//echo json_encode($lista);
+//===========================================
 
-$lista = Usuario::getList();
+//=========CARREGAUMA LISTA DE USUARIOS BUSCANDO NO BANCO DE DADOS
+//$search = Usuario::search("ro");
+//echo json_encode($search);
+//===========================================
 
-echo json_encode($lista);
-
-
+//=========CARREGA USUARIO USANDO O LOGIN E SENHA
+$usuario = new Usuario();
+$usuario->login("user","123456");
+echo $usuario;
 ?>
