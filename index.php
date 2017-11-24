@@ -18,7 +18,18 @@ require_once("config.php");
 //===========================================
 
 //=========CARREGA USUARIO USANDO O LOGIN E SENHA
-$usuario = new Usuario();
-$usuario->login("user","123456");
-echo $usuario;
+//$usuario = new Usuario();
+//$usuario->login("user","123456");
+//echo $usuario;
+
+//========INSERE UM USER COM APOIO DE UMA PROCEDURE RODANDO NO BANCO DE DADOS
+$aluno = new Usuario();
+
+$aluno->setDeslogin("Carlos");
+$aluno->setDessenha("1234");
+
+
+$aluno->insert();
+
+echo $aluno;
 ?>
