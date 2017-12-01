@@ -132,6 +132,26 @@ class Usuario{
         }
 
     }
+//=========FUNÇÃO PARA FAZER UPDATE============
+    public function update($login, $password){
+        $this->setDeslogin($login);
+        $this->setDessenha($password);
+        
+        $sql = new Sql();
+        
+        $sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID", array(
+        ':LOGIN'=>$this->getDeslogin(),
+        ':PASSWORD'=>$this->getDessenha(),
+        ':ID'=>$this->getIdusuario()    
+        ));
+    }
+//=========CONTRUCT PARA FACILITAR O CADASTRO====
+    public function __construct($login = "", $password = ""){
+        //as variaveis estão assim para poder ou não receber parametros.
+        
+        $this->setDeslogin($login);
+        $this->setDessenha($password);
+    }
 //=========CONVERTER PARA STRING===========
     public function __toString(){
         

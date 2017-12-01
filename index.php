@@ -23,13 +23,20 @@ require_once("config.php");
 //echo $usuario;
 
 //========INSERE UM USER COM APOIO DE UMA PROCEDURE RODANDO NO BANCO DE DADOS
-$aluno = new Usuario();
+//$aluno = new Usuario(/*poderia ser "carlos", "1234" */);// desta forma após a function __construct feita podemos ou não passar os parametros pela instância
 
-$aluno->setDeslogin("Carlos");
-$aluno->setDessenha("1234");
+//$aluno->setDeslogin("Carlos");
+//$aluno->setDessenha("1234");
 
 
-$aluno->insert();
+//$aluno->insert();
 
-echo $aluno;
+//echo $aluno;
+
+//=======UPDATE=============================
+$usuario = new Usuario();
+
+$usuario-> loadById(6);
+
+$usuario->update("Gokru","enois");
 ?>
